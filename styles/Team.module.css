@@ -1,0 +1,90 @@
+
+
+.section {
+
+}
+
+.container {
+    flex-direction: column;
+}
+
+.container_cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    text-align: center;
+
+    font-family: Rowdies, sans-serif;
+    text-transform: uppercase;
+
+    width: 20%;
+    margin: 4vmin;
+
+    cursor: pointer;
+}
+
+.card h4 {
+    font-size: 20px;
+}
+
+.card span {
+    font-size: 16px;
+    color: rgb(145, 143, 143);
+}
+
+.card img {
+    border-radius: 180%;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+
+/* Mobile */
+@media (min-width: 150px) and (max-width: 480px) {
+	.container_cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 90%;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+	.container_cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 90%;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        width: 30%;
+    }
+	
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+}
+
+/* TV */
+@media (min-width: 1201px) {
+	
+}

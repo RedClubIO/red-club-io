@@ -1,0 +1,109 @@
+
+
+.container_charities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vmin;
+}
+
+.charity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 1.5vmin;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0.25em;
+
+
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(51, 51, 51);
+
+    cursor: pointer;
+
+    transition: 0.4s all;
+}
+
+.charity:hover {
+    box-shadow: 7px 7px 0 0 #000;
+    transform: translate(-7px, -7px);
+}
+
+.charity_icon {
+    display: flex;
+}
+
+.charity_icon svg {
+    font-size: 12vmin;
+}
+
+.charity_info {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+}
+
+.charity_info h5 {
+    text-transform: uppercase;
+    font-family: Rowdies, sans-serif;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.charity_info b {
+    text-transform: uppercase;
+    font-family: Rowdies, sans-serif;
+    font-size: 20px;
+}
+
+
+/* Mobile */
+@media (min-width: 150px) and (max-width: 480px) {
+    .container_charities {
+        flex-direction: column;
+    }
+
+    .charity {
+        margin-top: 10vmin;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+	.container_charities {
+        flex-direction: column;
+    }
+
+    .charity {
+        margin-top: 6vmin;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container_charities {
+        flex-direction: column;
+    }
+
+    .charity {
+        margin-top: 4vmin;
+    }
+	
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+}
+
+/* TV */
+@media (min-width: 1201px) {
+	
+}

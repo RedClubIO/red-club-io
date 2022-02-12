@@ -1,0 +1,30 @@
+
+.section {
+    overflow-y: auto;
+}
+
+.container_doc {
+    display: flex;
+    flex-direction: column;
+}
+
+.document {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.document_title {
+    font-size: 24px;
+}
+
+.document_date {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #525252;
+}
+
+.document_content {
+    margin-top: 15px;
+    font-size: 18px;
+}

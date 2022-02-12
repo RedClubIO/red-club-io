@@ -1,0 +1,149 @@
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: fixed;
+	right: 0;
+	top: 0;
+    bottom: 0;
+
+    z-index: 10;
+
+}
+
+.nav_el {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_el > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	padding: 2.5vmin;
+	
+	color: #fff;
+	transition: 0.4s all;
+	font-size: 20px;
+
+
+	outline: none;
+}
+
+.nav_btn {
+	display: flex;
+	padding: 3vmin;
+
+	
+	
+	color: red;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+	transition: 0.4s all;
+	font-size: 30px;
+	
+	outline: none;
+	
+}
+
+.menu {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	
+	height: 100vh;
+	
+	color: #fff;
+	
+	background-color: #000432;
+    transition: width 0.4s ease-out;
+	
+	z-index: 9;
+
+    visibility: hidden;
+}
+
+.menu[data-menu='closed'] {
+	width: 0;
+    visibility: hidden;
+}
+
+.menu[data-menu='opened'] {
+	width: 25%;
+    visibility: visible;
+}
+
+.menu a {
+	display: flex;
+    align-items: center;
+	padding: 1rem 2rem;
+    
+	
+	font-size: 24px;
+    transition: 0.4s all;
+    font-family: Rowdies, sans-serif;
+
+}
+
+.menu svg {
+	margin-right: 5px;
+}
+
+.menu a:hover {
+    background: red;
+}
+
+.active {
+	background-color: red;
+}
+
+
+
+/* Mobile */
+@media (min-width: 150px) and (max-width: 480px) {
+	.menu[data-menu='opened'] {
+		width: 100%;
+	}
+    .menu a {
+        justify-content: center;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+	.menu[data-menu='opened'] {
+		width: 100%;
+	}
+    .menu a {
+        justify-content: center;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+	.menu[data-menu='opened'] {
+		width: 100%;
+	}
+    .menu a {
+        justify-content: center;
+    }
+	
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* TV */
+@media (min-width: 1201px) {
+	
+}

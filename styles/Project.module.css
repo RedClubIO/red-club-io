@@ -1,0 +1,142 @@
+
+.section {
+    overflow-y: auto;
+}
+
+.container_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 0.25em;
+    transition: 0.4s all;
+    position: relative;
+    margin: 1vmin;
+}
+
+.card:hover {
+    box-shadow: 7px 7px 0 0 #000;
+    transform: translate(-7px, -7px);
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    z-index: 1;
+}
+
+.card:hover .card_info {
+    background: rgba(0,0,0,.35);
+}
+
+.card_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.4vmin 0;
+}
+
+.card_description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card_description p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+.card_description svg {
+    margin: auto;
+    font-size: 6vmin !important;
+}
+
+.card:hover .card_description p {
+    visibility: visible;
+}
+
+.card img {
+    width: 100%;
+    transition: 0.7s all;
+}
+
+.card_link {
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: flex-start;
+    width: 80%;
+    height: 100%;
+    padding: 1.5vmin 0;
+    margin: auto;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+/* Mobile */
+@media (min-width: 150px) and (max-width: 480px) {
+	.container_cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 90%;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+	.container_cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 90%;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+	
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+}
+
+/* TV */
+@media (min-width: 1201px) {
+	
+}
