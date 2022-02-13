@@ -11,14 +11,37 @@ import UILink from '../components/UI/UILink';
 import { ABOUT, CHARITY, FAQ, PRIVACY, PROJECTS, MINT, REDCLUB, ROADMAP, TEAM, TERMS } from '../components/data/links';
 
 
+import {motion} from 'framer-motion';
+
+const blockAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: { delay: custom * 0.2}
+    }),
+}
+
 
 export default function Home() {
 	return (
 		<>
 		<Head><title>Home</title></Head>
 		
-		<section id="home" className={`${sMain.section} ${sHome.section}`}>
-			<div className={sMain.container}>
+		<motion.section
+            initial="hidden"
+            whileInView="visible"
+            id="home"
+            className={`${sMain.section} ${sHome.section}`}
+        >
+			<motion.div
+                custom={1}
+                variants={blockAnimation}
+                className={sMain.container}
+            >
 				<div className={sMain.container_text}>
 					<h1><b className={sMain.red}>Red</b>Club</h1>
 				</div>
@@ -34,8 +57,8 @@ export default function Home() {
                     {/* <UILink href={TERMS.href} icon={TERMS.icon} text={TERMS.text}  />
                     <UILink href={PRIVACY.href} icon={PRIVACY.icon} text={PRIVACY.text}  /> */}
 				</div>
-			</div>
-		</section>
+			</motion.div>
+		</motion.section>
 		</>
 	)
 }

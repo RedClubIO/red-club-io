@@ -46,6 +46,9 @@
 .container .red {
     color: rgba(220, 0, 0);
 }
+.container .orange {
+    color: rgb(255, 157, 0);
+}
 
 .container a svg {
 	font-size: 4vmin;

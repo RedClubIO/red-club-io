@@ -6,12 +6,34 @@ import sTeam from '../../styles/Team.module.css'
 
 import { team } from '../../components/data/team'
 
+import {motion} from 'framer-motion';
+
+const blockAnimation = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        x: 0,
+        opacity: 1,
+        transition: { delay: custom * 0.2}
+    }),
+}
+
 export default function Team() {
 	return (
 		<>
 			<Head><title>Team</title></Head>
-			<section id="team" className={`${sMain.section} ${sTeam.section}`}>
-				<div className={sMain.container}>
+			<motion.section
+                 initial="hidden"
+                 whileInView="visible"
+                id="team" className={`${sMain.section} ${sTeam.section}`}
+            >
+				<motion.div
+                    custom={1}
+                    variants={blockAnimation}
+                    className={sMain.container}
+                >
 					<div className={sMain.container_text}>
 						<h1><b className={sMain.red}>Red</b>Team</h1>
 					</div>
@@ -20,8 +42,8 @@ export default function Team() {
                             <TeamItem key={item.id} {...item} />
                         ))}
 					</div>
-				</div>
-			</section>
+				</motion.div>
+			</motion.section>
 		</>
 		)
 	}

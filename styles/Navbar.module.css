@@ -36,6 +36,7 @@
 .nav_btn {
 	display: flex;
 	padding: 3vmin;
+    margin-right: 10px;
 
 	
 	
@@ -65,7 +66,7 @@
 	color: #fff;
 	
 	background-color: #000432;
-    transition: width 0.4s ease-out;
+    transition: 0.3s all;
 	
 	z-index: 9;
 
@@ -89,9 +90,19 @@
     
 	
 	font-size: 24px;
-    transition: 0.4s all;
+    transition: 0.3s all;
     font-family: Rowdies, sans-serif;
 
+}
+
+.menu[data-menu='closed'] a {
+    display: none;
+    visibility: hidden;
+}
+
+.menu[data-menu='opened'] a {
+    display: flex;
+    visibility: visible;
 }
 
 .menu svg {

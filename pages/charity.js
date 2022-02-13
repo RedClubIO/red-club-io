@@ -8,13 +8,35 @@ import sCharity from '../styles/Charity.module.css'
 
 import { FcMoneyTransfer, FcBinoculars, FcCalculator } from 'react-icons/fc';
 
+import {motion} from 'framer-motion';
+
+const blockAnimation = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        x: 0,
+        opacity: 1,
+        transition: { delay: custom * 0.2}
+    }),
+}
+
 export default function Charity() {
 	return (
 		<>
 			<Head><title>Charity</title></Head>
 
-			<section id="charity" className={`${sMain.section} `}>
-				<div className={sMain.container}>
+			<motion.section
+                initial="hidden"
+                whileInView="visible"
+                id="charity" className={`${sMain.section} `}
+            >
+				<motion.div
+                    custom={1}
+                    variants={blockAnimation}
+                    className={sMain.container}
+                >
 					<div className={sMain.container_text}>
 						<h1><b className={sMain.red}>Charity</b></h1>
 					</div>
@@ -53,8 +75,8 @@ export default function Charity() {
                             </div>
                         </div>
 					</div>
-				</div>
-			</section>
+				</motion.div>
+			</motion.section>
 		</>	
 	);
 }

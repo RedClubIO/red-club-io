@@ -1,0 +1,9 @@
+
+.section {
+    overflow-y: auto;
+}
+
+.block p {
+    font-size: 20px;
+    text-align: center;
+}
